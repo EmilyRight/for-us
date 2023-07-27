@@ -1,0 +1,159 @@
+.section-actions {
+  background-color: $color-dark;
+  .section-layer {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -8rem;
+
+    .actions {
+      &__content {
+        position: relative;
+        padding: 1.8rem 1.8rem 3.9rem 1.8rem;
+      }
+
+      &__blur-spot {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #d7ff38;
+        filter: blur(50px);
+        top: 5rem;
+        right: 3rem;
+        z-index: 0;
+      }
+
+      &__title {
+        color: #fff;
+      }
+
+      &__steps {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .actions-content {
+      border-radius: 1.8rem;
+      background: #38ffa6;
+      box-shadow: 0px 0.4rem 2rem 0px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 3.6rem;
+      overflow: hidden;
+      &__text {
+        position: relative;
+        z-index: 5;
+        order: 2;
+        overflow: hidden;
+        p {
+          font-family: $font1;
+          margin: 0;
+        }
+      }
+
+      &__title {
+        margin-bottom: 1.2rem;
+      }
+
+      &__image {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 5;
+      }
+    }
+  }
+  .actions {
+    &__button {
+      background-color: #38ffa6;
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem;
+      display: flex;
+      justify-content: center;
+      .btn {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .section-layer {
+      margin-top: -12rem;
+      padding-bottom: 5rem;
+      .actions {
+        &__content {
+          padding: 4.8rem 1.8rem 4.8rem 9.5rem;
+          order: 0;
+        }
+
+        &__title {
+          color: #fff;
+          order: 2;
+          text-align: center;
+        }
+
+        &__steps {
+          width: 100%;
+          order: 1;
+          margin-bottom: 2.4rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .actions-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 3.6rem;
+        overflow: hidden;
+
+        &__text {
+          max-width: 60%;
+          position: relative;
+          z-index: 5;
+          order: 1;
+          overflow: hidden;
+          margin-right: 2.9rem;
+
+          p {
+            font-family: $font1;
+            margin: 0;
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+          }
+        }
+
+        &__title {
+          margin-bottom: 1.8rem;
+        }
+
+        &__image {
+          order: 2;
+          position: relative;
+          width: 40%;
+          min-height: 100%;
+          z-index: 5;
+          img {
+            position: absolute;
+            display: block;
+            max-width: 100%;
+            left: 0;
+            bottom: 50%;
+            transform: translate(0, 50%);
+          }
+        }
+      }
+    }
+    .actions {
+      &__button {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+      }
+    }
+  }
+}

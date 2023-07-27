@@ -1,0 +1,127 @@
+.section-tariffs {
+  .section-layer {
+    flex-direction: column;
+    padding-bottom: 6rem;
+  }
+  .tariffs {
+    &__title {
+      padding-left: 1.8rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &__info {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      font-family: $font1;
+      text-align: center;
+    }
+  }
+  .tariffs-list {
+    &__item {
+      border-radius: 1.8rem;
+      background-color: #f3f5f6;
+      padding: 1.8rem;
+      min-height: 19.6rem;
+      margin-bottom: 2rem;
+      @include text-normal;
+      position: relative;
+    }
+  }
+  .tariff {
+    &__text {
+      max-width: 90%;
+    }
+
+    &__price {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &__blur-spot {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      background-color: #38ffa6;
+      filter: blur(20px);
+      right: 3rem;
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .section-layer {
+      flex-direction: column;
+      padding-bottom: 4.8rem;
+    }
+    .tariffs {
+      &__title {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &__info {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-family: $font1;
+        text-align: center;
+      }
+    }
+    .tariffs-list {
+      &__item {
+        border-radius: 1.8rem;
+        background-color: #f3f5f6;
+        padding: 2.4rem;
+        min-height: 26rem;
+        width: calc(100% / 3 - 1rem);
+        max-width: 35rem;
+        margin-bottom: 2rem;
+        @include text-normal;
+        font-weight: 700;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .tariff {
+      &__text {
+        max-width: 100%;
+        margin-bottom: 1.2rem;
+      }
+
+      &__price {
+        height: 8rem;
+
+        position: static;
+        margin-left: -1.2rem;
+        z-index: 1;
+        img {
+          margin: 0;
+          display: block;
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+      &__blur-spot {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #38ffa6;
+        filter: blur(30px);
+        right: 3rem;
+        bottom: 7rem;
+        z-index: 0;
+      }
+    }
+  }
+}
