@@ -1,17 +1,12 @@
-import $ from 'jquery';
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
 import { closeModal, openModal } from './components/modal';
-import {
-  fieldListener, validateFields, keyField, prepField,
-} from './components/inputs';
 import generateId from './components/utils';
 import GTMEvents from './components/gtmEvents';
 
 const GTM = new GTMEvents();
 
-window.jQuery = window.$ = $;
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
@@ -21,6 +16,7 @@ window.addEventListener('load', () => {
   goNextSection();
   openPopup();
   faqOpener();
+  setAnimation()
 });
 
 function goNextSection() {
@@ -62,6 +58,7 @@ function setActive(arr) {
     }
   });
 }
+
 function faqOpener() {
   const itemsList = document.querySelectorAll('.faq__item');
   const activeClassName = 'active';
@@ -77,5 +74,15 @@ function faqOpener() {
         item.classList.add(activeClassName);
       }
     });
+  });
+}
+
+function setAnimation() {
+  const screenWidth = document.documentElement.clientWidth;
+  const items = document.querySelectorAll('.tariff');
+  items.forEach((it) => {
+    if (screenWidth < 600) {
+      it.classList.add('fadeInUp');
+    }
   });
 }

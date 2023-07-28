@@ -156,8 +156,6 @@
           color: #fff;
           order: 2;
           text-align: center;
-          // grid-row: 3/3;
-          // grid-column: 1/7;
         }
 
         &__steps {
@@ -222,11 +220,6 @@
       flex-direction: row;
       width: 100%;
       margin-bottom: -10%;
-      // display: grid;
-      // grid-template-columns: 13% 20% 21% 16% 14% 15%;
-      // grid-template-rows: 1fr 1fr 1fr;
-      // max-height: 80%;
-      // border: 1px solid red;
 
       &__container {
         height: 24vw;
@@ -309,86 +302,6 @@
           align-content: center;
         }
       }
-      // &__container {
-      //     height: 24vw;
-      //     max-width: 114.3rem;
-      //     width: 100%;
-      //     background-image: url(../img/page/actions-desk.svg);
-      //     background-repeat: no-repeat;
-      //     background-size: 95%;
-      //     display: flex;
-      //     align-items: flex-end;
-      //   }
-      //   &__item {
-      //     color: #fff;
-      //     font-family: $font1;
-      //     display: flex;
-      //     height: auto;
-      //     max-width: none;
-      //     align-items: flex-start;
-      //     text-align: center;
-      //     font-size: clamp(1.6rem, 1.5vw, 1.2rem);
-      //     a {
-      //       color: #fff;
-      //     }
-      //     p {
-      //       margin: 0;
-      //       max-width: 100%;
-      //     }
-
-      //     &_bottom {
-      //       // margin-bottom: -12%;
-      //       grid-row: 2/3;
-      //       padding-right: 0;
-      //     }
-
-      //     &_top {
-      //       align-items: flex-start;
-      //       padding: 0;
-      //       padding-top: 2rem;
-      //       grid-row: 1/2;
-      //     }
-      //     &.step-1 {
-      //       align-content: center;
-      //       grid-column: 1 / 2;
-      //       height: auto;
-      //     }
-      //     &.step-2 {
-      //       max-width: none;
-      //       height: auto;
-      //       align-content: center;
-      //       grid-column: 2/3;
-      //     }
-      //     &.step-3 {
-      //       max-width: none;
-      //       width: auto;
-      //       height: auto;
-      //       align-content: center;
-      //       grid-column: 3/4;
-      //     }
-      //     &.step-4 {
-      //       max-width: none;
-      //       width: auto;
-      //       height: auto;
-      //       align-content: center;
-      //       grid-column: 4/5;
-
-      //     }
-      //     &.step-5 {
-      //       max-width: none;
-      //       width: auto;
-      //       height: auto;
-      //       align-content: center;
-      //       grid-column: 5/6
-      //     }
-      //     &.step-6 {
-      //       max-width: none;
-      //       width: auto;
-      //       height: auto;
-      //       align-content: center;
-      //       grid-column: 6/7;
-      //     }
-      //   }
     }
   }
 }
