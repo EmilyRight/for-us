@@ -209,8 +209,18 @@
               </p>
             </div>
             <div class="invest__buttons">
-              <a class="invest__button btn" href="">Начать</a>
-              <a class="invest__button btn btn-primary" href="">Подробнее</a>
+              <a
+                class="invest__button btn js-gtm-event"
+                href=""
+                data-event="conv_start-lesson"
+                >Начать</a
+              >
+              <button
+                class="invest__button btn btn-primary js-gtm-event js-go-next"
+                data-event="about"
+              >
+                Подробнее
+              </button>
             </div>
           </div>
           <div class="invest-pic-layer">
@@ -259,7 +269,9 @@
               Вознаграждения суммируются и&nbsp;выплачиваются один раз
               в&nbsp;квартал после проверки на&nbsp;качество.
             </p>
-            <p class="popup__link link">Что такое качественное подключение?</p>
+            <p class="popup__link link js-gtm-event" data-event="quality-info">
+              Что такое качественное подключение?
+            </p>
           </div>
         </div>
       </section>
@@ -284,18 +296,63 @@
             <div class="actions__blur-spot"></div>
           </div>
           <h2 class="actions__title">Как стать частью программы</h2>
+
           <div class="actions__steps">
-            <picture>
-              <source
-                media="(min-width: 600px)"
-                srcset="./img/page/actions-desc.png"
-              />
-              <img src="./img/page/actions-mob.png" alt="" />
-            </picture>
+            <div class="steps__container">
+              <ul class="steps">
+                <li class="steps__item steps__item_bottom step-1">
+                  <p>
+                    Пройти курс
+                    <a
+                      class="link"
+                      href="https://levelup.tele2.ru/study/lessons/937"
+                      data-event="text-link_lesson"
+                      target="_blank"
+                      >&laquo;Реферальная программа &laquo;Для своих&raquo;
+                      на&nbsp;Level&nbsp;Up</a
+                    >
+                  </p>
+                </li>
+                <li class="steps__item steps__item_top step-2">
+                  Заказать и&nbsp;получить электронную доверенность
+                  на&nbsp;подключение по&nbsp;заявке в&nbsp;BRO
+                </li>
+                <li class="steps__item steps__item_bottom step-3">
+                  Оформить заявку на&nbsp;вступление в&nbsp;программу &laquo;Для
+                  своих&raquo; в&nbsp;BRO и&nbsp;получить персональный код
+                  торговой точки
+                </li>
+                <li class="steps__item steps__item_top step-4">
+                  Получить SIM-карты для подключения
+                </li>
+                <li class="steps__item steps__item_bottom step-5">
+                  <p>
+                    <a
+                      class="link"
+                      href=""
+                      data-event="text-link_appseller"
+                      target="_blank"
+                      >Скачать приложение AppSeller</a
+                    >
+                    и&nbsp;зарегистрироваться в&nbsp;нем
+                  </p>
+                </li>
+                <li class="steps__item steps__item_top step-6">
+                  Подключать новых абонентов к&nbsp;Tele2 и&nbsp;получать
+                  вознаграждение!
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="actions__button">
-          <a href="" class="btn btn-primary">Пройти курс</a>
+          <a
+            href="https://levelup.tele2.ru/study/lessons/937"
+            class="btn btn-primary"
+            data-event="conv_lesson"
+            target="_blank"
+            >Пройти курс</a
+          >
         </div>
       </section>
       <section class="section section--footer">
@@ -315,6 +372,42 @@
           </div>
         </div>
       </section>
+      <div class="popup-modal popup-modal-hidden">
+        <div class="modal-box" id="popup-modal-box">
+          <div class="modal-box__header">
+            <h4>Качественные подключения</h4>
+            <div class="close">
+              <svg viewBox="0 0 24 24" width="100%">
+                <use xlink:href="#close"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-box__body">
+            <ul class="modal-box__list modal-box-list">
+              <li class="modal-box-list__item">
+                Для новых абонентов мобильной связи&nbsp;&mdash; оплата другом
+                двух абонентских плат за&nbsp;тариф после активации SIM.
+              </li>
+              <li class="modal-box-list__item">
+                Для MNP&nbsp;&mdash; факт перехода в&nbsp;Tele2 и&nbsp;оплата
+                другом двух абонентских плат за&nbsp;тариф после активации SIM.
+              </li>
+              <li class="modal-box-list__item">
+                Для домашнего интернета&nbsp;&mdash; факт подключения услуг
+                поcле оформления заявки.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-box__actions">
+            <div>
+              <span
+                class="btn close"
+                >Понятно</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./js/main.js?v1" defer></script>

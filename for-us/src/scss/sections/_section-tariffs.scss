@@ -25,6 +25,11 @@
       margin-bottom: 2rem;
       @include text-normal;
       position: relative;
+      transition: .4s;
+    }
+    &__item:hover {
+      border-radius: 1.8rem;
+      background-color: #d7ff38;
     }
   }
   .tariff {
@@ -34,9 +39,14 @@
 
     &__price {
       position: absolute;
+      max-width: 80%;
       bottom: 0;
       left: 0;
       z-index: 1;
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
 
     &__blur-spot {

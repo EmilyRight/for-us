@@ -19,9 +19,8 @@ window.addEventListener('load', () => {
 
   GTM.addEventListeners();
   goNextSection();
-
-  });
-
+  openPopup();
+});
 
 function goNextSection() {
   const goNextBtns = document.querySelectorAll('.js-go-next');
@@ -45,4 +44,9 @@ function scrollToElement(el) {
   const offs = 0;
   const y = el.getBoundingClientRect().top + window.scrollY + offs;
   window.scrollTo({ top: y, behavior: 'smooth' }); // element.scrollIntoView();
+}
+
+function openPopup() {
+  const popupLink = document.querySelector('.popup__link');
+  popupLink.addEventListener('click', () => openModal('#popup-modal-box'));
 }
