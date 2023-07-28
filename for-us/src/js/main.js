@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
   GTM.addEventListeners();
   goNextSection();
   openPopup();
+  faqOpener();
 });
 
 function goNextSection() {
@@ -49,4 +50,32 @@ function scrollToElement(el) {
 function openPopup() {
   const popupLink = document.querySelector('.popup__link');
   popupLink.addEventListener('click', () => openModal('#popup-modal-box'));
+}
+
+function setActive(arr) {
+  const activeClassName = 'active';
+  arr.forEach((el) => {
+    const itemText = el.childNodes[3]; // хардкод текстового дочернего узла
+    if (el.classList.contains(activeClassName)) {
+      itemText.style.transition = 'none';
+      el.classList.remove(activeClassName);
+    }
+  });
+}
+function faqOpener() {
+  const itemsList = document.querySelectorAll('.faq__item');
+  const activeClassName = 'active';
+  itemsList.forEach((item) => {
+    item.addEventListener('click', () => {
+      const itemText = item.childNodes[3]; // хардкод текстового дочернего узла
+      if (item.classList.contains(activeClassName)) {
+        itemText.style.transition = 'none';
+        item.classList.remove(activeClassName);
+      } else {
+        setActive(itemsList);
+        itemText.style.transition = '0.2s ease-in-out';
+        item.classList.add(activeClassName);
+      }
+    });
+  });
 }
