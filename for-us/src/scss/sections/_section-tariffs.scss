@@ -25,9 +25,9 @@
       margin-bottom: 2rem;
       @include text-normal;
       position: relative;
-      transition: .4s;
+      transition: 0.4s;
       overflow: hidden;
-      opacity: 0;
+      // opacity: 0;
     }
     &__item:hover {
       border-radius: 1.8rem;
@@ -80,7 +80,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 2.4rem
+        margin-bottom: 2.4rem;
       }
 
       &__info {
@@ -88,9 +88,8 @@
         line-height: 2.2rem;
         font-family: $font1;
         text-align: center;
-        margin-bottom: 3.6rem
-        p {
-          margin-bottom: 1.8rem
+        margin-bottom: 3.6rem p {
+          margin-bottom: 1.8rem;
         }
       }
     }
@@ -110,6 +109,11 @@
         flex-direction: column;
         justify-content: space-between;
         opacity: 1;
+        // animation-name: yellowColor;
+        // animation-duration: 1.5s;
+        // animation-fill-mode: forwards;
+        // animation-iteration-count: infinite;
+
       }
     }
     .tariff {
@@ -143,5 +147,41 @@
         z-index: 0;
       }
     }
+  }
+}
+
+@keyframes yellowColor {
+  0% {
+    background-color: #f3f5f6;
+  }
+  10%{
+    background-color: #f3f5f6;
+  }
+  20% {
+    background-color: #f3f5f6;
+  }
+  30% {
+    background-color: #f3f5f6;
+  }
+  40%{
+    background-color: #f3f5f6;
+  }
+  50% {
+    background-color: #d7ff38;
+  }
+  60% {
+    background-color: #f3f5f6;
+  }
+  70% {
+    background-color: #f3f5f6;
+  }
+  80% {
+    background-color: #f3f5f6;
+  }
+  90% {
+    background-color: #f3f5f6;
+  }
+  100% {
+    background-color: #f3f5f6;
   }
 }

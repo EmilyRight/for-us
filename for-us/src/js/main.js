@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
@@ -77,10 +78,17 @@ function faqOpener() {
   });
 }
 
+function setMobileAnimation(element, index) {
+  setInterval(() => {
+    element.style.animation = `yellowColor 5s linear ${index}s infinite forwards`;
+  }, 3000);
+}
+
 function setAnimation() {
   const screenWidth = document.documentElement.clientWidth;
-  const items = document.querySelectorAll('.tariff');
-  items.forEach((it) => {
+  const items = document.querySelectorAll('.tariffs-list__item');
+  items.forEach((it, i) => {
+    setMobileAnimation(it, i);
     if (screenWidth < 600) {
       it.classList.add('fadeInUp');
     }
