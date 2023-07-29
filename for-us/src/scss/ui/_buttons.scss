@@ -25,6 +25,8 @@ button {
   color: $color-dark;
   background-color: transparent;
   transition: 0.3s;
+  position: relative;
+  z-index: 100;
   &:hover {
     background-color: transparent;
     border-color: $color-gray;

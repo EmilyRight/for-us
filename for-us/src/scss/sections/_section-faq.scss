@@ -16,19 +16,7 @@
 
     &__list {
       list-style: disc;
-    }
-
-    &__link {
-    }
-
-    &__item {
-    }
-  }
-  .faq-info-block {
-    &__title {
-    }
-
-    &__list {
+      margin-left: 1rem;
     }
   }
 
@@ -94,7 +82,7 @@
       width: 1.95rem;
       position: relative;
       user-select: none;
-      // display: flex;
+
       svg {
         display: block;
         width: inherit;
@@ -127,11 +115,13 @@
         opacity: 1;
       }
     }
+    ol {
+      list-style: decimal;
+      margin-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
   }
-  .subtitle {
-  }
-  .small-text {
-  }
+
   .item-last {
     margin-bottom: 1.8rem;
     border-radius: 1.8rem;

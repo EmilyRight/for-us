@@ -38,7 +38,7 @@
   }
 
   .modal-box {
-    // display: none;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     background: #fff;
@@ -50,6 +50,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 1.2rem;
     &__list {
       padding-left: 1rem;
       font-family: $font1;
