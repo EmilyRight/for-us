@@ -120,6 +120,8 @@
       &__text {
         max-width: 100%;
         margin-bottom: 1.2rem;
+        position: relative;
+        z-index: 1;
       }
 
       &__price {
@@ -136,14 +138,14 @@
         }
       }
       &__blur-spot {
-        width: 7rem;
-        height: 7rem;
+        width: 13rem;
+        height: 13rem;
         border-radius: 50%;
         position: absolute;
         background-color: #38ffa6;
-        filter: blur(30px);
-        right: 3rem;
-        bottom: 7rem;
+        filter: blur(50px);
+        right: 1rem;
+        bottom: 1rem;
         z-index: 0;
       }
     }

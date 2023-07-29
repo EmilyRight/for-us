@@ -18,6 +18,17 @@ window.addEventListener('load', () => {
   openPopup();
   faqOpener();
   setAnimation();
+
+  const screenWidth = document.documentElement.clientWidth;
+  const items = document.querySelectorAll('.tariffs-list__item');
+  const lastItem = Array.from(items).pop();
+  if (screenWidth < 600) {
+    lastItem.addEventListener('animationend', () => {
+      items.forEach((it, i) => {
+        setMobileAnimation(it, i);
+      });
+    });
+  }
 });
 
 function goNextSection() {
@@ -88,7 +99,9 @@ function setAnimation() {
   const screenWidth = document.documentElement.clientWidth;
   const items = document.querySelectorAll('.tariffs-list__item');
   items.forEach((it, i) => {
-    setMobileAnimation(it, i);
+    if (screenWidth >= 600) {
+      setMobileAnimation(it, i);
+    }
     if (screenWidth < 600) {
       it.classList.add('fadeInUp');
     }
