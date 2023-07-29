@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
   goNextSection();
   openPopup();
   faqOpener();
-  setAnimation()
+  setAnimation();
 });
 
 function goNextSection() {
@@ -79,6 +79,7 @@ function faqOpener() {
 
 function setAnimation() {
   const screenWidth = document.documentElement.clientWidth;
+  console.log(screenWidth);
   const items = document.querySelectorAll('.tariff');
   items.forEach((it) => {
     if (screenWidth < 600) {
