@@ -27,6 +27,7 @@
       position: relative;
       transition: .4s;
       overflow: hidden;
+      opacity: 0;
     }
     &__item:hover {
       border-radius: 1.8rem;
@@ -108,6 +109,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        opacity: 1;
       }
     }
     .tariff {
