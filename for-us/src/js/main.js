@@ -9,7 +9,7 @@ import GTMEvents from './components/gtmEvents';
 const GTM = new GTMEvents();
 
 /// /////// DocReady //////////
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
 
@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
   if (screenWidth < 600) {
     lastItem.addEventListener('animationend', () => {
       items.forEach((it, i) => {
-        setMobileAnimation(it, i);
+        // setMobileAnimation(it, i);
       });
     });
   }
@@ -89,19 +89,10 @@ function faqOpener() {
   });
 }
 
-function setMobileAnimation(element, index) {
-  setInterval(() => {
-    element.style.animation = `yellowColor 5s linear ${index}s infinite forwards`;
-  }, 3000);
-}
-
 function setAnimation() {
   const screenWidth = document.documentElement.clientWidth;
   const items = document.querySelectorAll('.tariffs-list__item');
-  items.forEach((it, i) => {
-    if (screenWidth >= 600) {
-      setMobileAnimation(it, i);
-    }
+  items.forEach((it) => {
     if (screenWidth < 600) {
       it.classList.add('fadeInUp');
     }

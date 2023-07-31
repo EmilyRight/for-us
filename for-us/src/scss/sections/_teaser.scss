@@ -1,73 +1,54 @@
 .teaser {
-  position: relative;
-  z-index: 5;
+  position: relative;z-index: 5;
 
-  .container {
-    position: relative;
-  }
+  .container {position: relative;}
   &__content {
     max-height: 60vh;
     min-height: 48rem;
-    height: 50vw;
-    display: flex;
-    flex-direction: column;
+    height: 50vw;display: flex;flex-direction: column;
+    padding-top: 50vw;
   }
   &__picture {
-    height: 100%;
-    position: relative;
-    &::after {
-      content: "";
-      width: calc(100% + 3.6rem);
-      height: 100%;
-      background-color: #D7FF38;
-      position: absolute;
-      -webkit-clip-path: polygon(0 30%, 0% 100%, 100% 100%);
-      clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-      top: 0;
-      left:-1.8rem;
-      z-index: 1;
-      opacity: 0.6;
-    }
-    &::before {
-      content: "";
-      width: calc(100% + 3.6rem);
-      height: 100%;
-      background-color: #D7FF38;
-      position: absolute;
-      -webkit-clip-path: polygon(0 30%, 0% 100%, 100% 100%);
-      clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-      top: 0;
-      left:-1.8rem;
-      z-index: 1;
-      opacity: 0.6;
-    }
+    margin-top: -50vw;position: absolute;
+    width: 100%;height: 100%;
+    &:before{
+    right: 100%;top: 0;height: 100%;
+    width: 50%;z-index: 2;background: #d7ff38;
+  }
   }
   .pic-layer {
     position: absolute;
     max-height: 100%;
-    picture {
-      min-height: 100%;
-    }
-    img {
-      display: block;
+    picture {min-height: 100%;}
+    img {display: block;
       position: absolute;
-      bottom: -4rem;
-      min-height: 100%;
+      left:calc(-10% - 1.8rem);width:120%;
+    //  bottom: -4rem;
+     // width: 125%;
     }
     &_main {
-      bottom: 0rem;
-      right: 50%;
-      transform: translateX(50%);
-      width: 140%;
-      max-width: 50rem;
-      z-index: 1;
+      height: 100%;
+      width: 100%;
+     // right: 50%;
+      //transform: translateX(50%);
+     // width: 140%;
+     // max-width: 50rem;
+      z-index: 0;
     }
   }
+
+  .teaser-bg{position: absolute;
+    width: 100%;height: 100%;top:50vw;
+    left:-10%;
+    svg{display: block;width: 150%;margin-left: -15%;}
+  }
+
 
   .teaser-body {
     z-index: 2;
     max-width: 100%;
     margin: 0 auto;
+    padding-top: 35vw;
     &__text {
       padding: 1.8rem;
       margin: 0;
@@ -128,66 +109,51 @@
   @media (min-width: 600px) {
     overflow: hidden;
     position: relative;
-    &::after {
-      content: "";
-      width: 70%;
-      height: 100%;
-      background-color: #D7FF38;
-      position: absolute;
-      -webkit-clip-path: polygon(0 0, 42% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 49% 0, 100% 100%, 0% 100%);
-      bottom: 0;
-      z-index: 1;
-      opacity: 0.2;
-    }
-    &::before {
-      content: "";
-      width: 70%;
-      height: 100%;
-      background-color: #D7FF38;
-      position: absolute;
-      -webkit-clip-path: polygon(0 0, 42% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 49% 0, 100% 100%, 0% 100%);
-      bottom: 0;
-      z-index: -1;
-      opacity: 1;
+
+    .teaser-bg{position: absolute;
+      width: 100%;height: 100%;top:0;
+      left:-18%;
+      svg{display: block;height: 150%;width: auto;margin-left: 0}
     }
 
     &__content {
+      padding-top: 0;
       flex-direction: row;
       justify-content: space-between;
       height: auto;
-      min-height: 38rem;
+      min-height: 50rem;
     }
 
     &__picture {
+      margin-top: 0;
       height: auto;
       min-width: 50%;
       position: relative;
       order: 2;
-      &::after,
-      &::before {
-        display: none;
-      }
+      img{}
     }
     .pic-layer {
-      &_main {
-        right: 0%;
-
-        width: 100%;
-        max-width: none;
-        transform: none;
+      &_main {right: 0;width: 100%;max-width: none;transform: none;}
+      img{height: 118%;width: auto;bottom:0;//left:-10%;
       }
-
     }
 
     .teaser-body {
+      padding-top: 0;
+      &:before {
+        content:'';display: block;position: absolute;
+        right: 100%;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        z-index: 2;
+        background: #E5FF00;
+      }
       max-width: 50%;
       margin: 0;
       order: 1;
       &__text {
-        margin: 0;
-        margin-top: 4rem;
+        margin:25% 0 0;
         background-color: transparent;
         color: #000;
         z-index: 8;

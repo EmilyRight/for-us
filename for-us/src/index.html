@@ -131,6 +131,9 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="svgs">
       <svg xmlns="http://www.w3.org/2000/svg">
+        <g id="teaser-bg" style="mix-blend-mode: multiply" fill="#E5FF00">
+          <path d="M150.441 -30H0V550H1265L150.441 -30Z"></path>
+        </g>
         <g id="page-logo">
           <path
             class="t2logo"
@@ -229,6 +232,11 @@
               </div>
             </div>
           </div>
+          <div class="teaser-bg">
+            <svg viewBox="0 0 1265 550">
+              <use xlink:href="#teaser-bg"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -249,14 +257,14 @@
             </div>
             <div class="invest__buttons">
               <a
-                class="invest__button btn js-gtm-event"
+                class="invest__button btn btn-primary js-gtm-event"
                 href="https://levelup.tele2.ru/study/lessons/937"
                 data-event="conv_start-lesson"
                 target="_blank"
-                >Начать</a
+                >Пройти курс</a
               >
               <button
-                class="invest__button btn btn-primary js-gtm-event js-go-next"
+                class="invest__button btn js-gtm-event js-go-next"
                 data-event="about"
               >
                 Подробнее
@@ -264,14 +272,18 @@
             </div>
           </div>
           <div class="invest-pic-layer">
-            <img src="./img/page/invest.png" alt="" />
+            <img
+              src="./img/page/invest-pic.jpg"
+              srcset="./img/page/invest-pic@2x.jpg 2x"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <section class="section section-tariffs tariffs">
         <div class="section-layer">
           <h2 class="tariffs__title">
-            Получайте до&nbsp;3000&nbsp;₽ за&nbsp;каждого друга
+            Получайте от&nbsp;500 до&nbsp;3000&nbsp;₽ за&nbsp;каждого друга
           </h2>
           <ul class="tariffs__list tariffs-list">
             <li class="tariffs-list__item tariff wow" data-wow-delay=".4s">
@@ -368,19 +380,30 @@
                       href="https://levelup.tele2.ru/study/lessons/937"
                       data-event="text-link_lesson"
                       target="_blank"
-                      >&laquo;Реферальная программа &laquo;Для своих&raquo;
+                      >&laquo;программа &laquo;Для своих&raquo;
                       на&nbsp;Level&nbsp;Up</a
                     >
                   </p>
                 </li>
                 <li class="steps__item steps__item_top step-2">
                   Заказать и&nbsp;получить электронную доверенность
-                  на&nbsp;подключение по&nbsp;заявке в&nbsp;BRO
+                  на&nbsp;подключение
+                  <a
+                    class="link js-gtm-event"
+                    data-event="text-link_formalize"
+                    href=" https://bro.tele2.ru/create-bid/5ba43d14-3ab9-4b34-b694-24a6f5539c06"
+                    >по&nbsp;заявке в&nbsp;BRO</a
+                  >
                 </li>
                 <li class="steps__item steps__item_bottom step-3">
-                  Оформить заявку на&nbsp;вступление в&nbsp;программу &laquo;Для
-                  своих&raquo; в&nbsp;BRO и&nbsp;получить персональный код
-                  торговой точки
+                  <a
+                    class="link js-gtm-event"
+                    data-event="text-link_join"
+                    href="https://bro.tele2.ru/create-bid/0cc5f5f0-b0fc-4a59-a3f6-4e21ba863a36"
+                    >Оформить заявку</a
+                  >
+                  на&nbsp;вступление в&nbsp;программу &laquo;Для своих&raquo;
+                  в&nbsp;BRO и&nbsp;получить персональный код торговой точки
                 </li>
                 <li class="steps__item steps__item_top step-4">
                   Получить SIM-карты для подключения
@@ -849,7 +872,7 @@
             <div class="copyrights">18+ &copy; Tele2 Россия, 2023.</div>
             <div class="rules">
               <a
-                href="https://tele2.ru/minutes-management"
+                href="https://s3.tele2.ru/ds-site/actions/pravila-akcii-programma-dlya-svoih.pdf"
                 target="_blank"
                 class="text-link js-gtm-event"
                 data-event="rules-link"

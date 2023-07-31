@@ -34,6 +34,8 @@
       justify-content: center;
     }
   }
+
+
   .steps {
     color: #fff;
     display: flex;
@@ -48,17 +50,14 @@
       background-size: contain;
     }
     &__item {
-      color: #fff;
-      font-family: $font1;
-      max-width: 65%;
-      display: flex;
+      color: #fff;font-family: $font1;
+      max-width: 65%;display: flex;
       align-items: center;
-      a {
-        color: #fff;
+      @media (max-width: 375px) {
+        font-size: 1.4rem;
       }
-      p {
-        margin: 0;
-      }
+      a {color: #fff;}
+      p {margin: 0;}
 
       &_bottom {
         align-self: flex-end;
@@ -91,6 +90,17 @@
         align-content: center;
       }
     }
+
+    @media (max-width:360px) {
+      .steps__item{ font-size: 1.3rem;}
+      .step-1{height: 16%}
+      .step-2{height: 16%}
+      .step-3{height: 23%}
+      .step-6{height: 13%}
+    }
+  }
+  @media (max-width:350px){
+    .steps__container{height:64rem}
   }
   .actions-content {
     border-radius: 1.8rem;

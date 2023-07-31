@@ -41,15 +41,9 @@ body {
   }
 }
 
-.page {
-  background: #fff;
-  transition: 0.2s;
-}
-.wow {
-  opacity: 0;
-  &.animated {
-    opacity: 1;
-  }
+.page {background: #fff;transition: 0.2s;}
+.wow {opacity: 0;
+  &.animated {opacity: 1;}
   //@media all and(max-width:600px){opacity: 1}
 }
 .svgs {
