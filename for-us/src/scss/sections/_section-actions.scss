@@ -35,7 +35,6 @@
     }
   }
 
-
   .steps {
     color: #fff;
     display: flex;
@@ -43,21 +42,28 @@
     width: 100%;
     height: 100%;
     &__container {
-      height: 72.4rem;
-      width: 33rem;
+      height: 205.5vw;
+      width: 100%;
       background-image: url(../img/page/actions-mob.svg);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 100%;
     }
     &__item {
-      color: #fff;font-family: $font1;
-      max-width: 65%;display: flex;
+      color: #fff;
+      font-family: $font1;
+      max-width: 65%;
+      display: flex;
       align-items: center;
-      @media (max-width: 375px) {
+      align-content: center;
+      @media (max-width: 429px) {
         font-size: 1.4rem;
       }
-      a {color: #fff;}
-      p {margin: 0;}
+      a {
+        color: #fff;
+      }
+      p {
+        margin: 0;
+      }
 
       &_bottom {
         align-self: flex-end;
@@ -65,42 +71,64 @@
       }
 
       &_top {
-        padding-left: 2rem;
+        padding-left: 3rem;
       }
       &.step-1 {
-        height: 16.5%;
+        height: 37vw;
         align-content: center;
       }
       &.step-2 {
         max-width: 68%;
-        height: 16.5%;
+        height: 37vw;
         align-content: center;
       }
       &.step-3 {
-        height: 23.5%;
+        height: 52vw;
         align-content: center;
         // pointer-events: none;
       }
       &.step-4 {
-        height: 14.5%;
+        height: 33vw;
         align-content: center;
       }
       &.step-5 {
-        height: 15.5%;
+        height: 31vw;
+        align-content: center;
+      }
+      &.step-6 {
+        height: 31vw;
         align-content: center;
       }
     }
 
-    @media (max-width:360px) {
-      .steps__item{ font-size: 1.3rem;}
-      .step-1{height: 16%}
-      .step-2{height: 16%}
-      .step-3{height: 23%}
-      .step-6{height: 13%}
+    @media (max-width: 387px) {
+      .steps__item {
+        font-size: 1.3rem;
+      }
+      .step-1 {
+        height: 33vw;
+      }
+      .step-2 {
+        height: 33vw;
+      }
+      .step-3 {
+        height: 47vw;
+      }
+      .step-4 {
+        height: 30vw;
+      }
+      .step-5 {
+        height: 25vw;
+      }
+      .step-6 {
+        height: 33vw;
+      }
     }
   }
-  @media (max-width:350px){
-    .steps__container{height:64rem}
+  @media (max-width: 350px) {
+    .steps__container {
+      height: 64rem;
+    }
   }
   .actions-content {
     border-radius: 1.8rem;
@@ -167,6 +195,7 @@
           color: #fff;
           order: 2;
           text-align: center;
+          margin-top: 5rem;
         }
 
         &__steps {
