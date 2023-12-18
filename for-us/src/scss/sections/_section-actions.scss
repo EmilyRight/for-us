@@ -146,6 +146,9 @@
       overflow: hidden;
       p {
         font-family: $font1;
+        // margin: 0;
+      }
+      p:last-child {
         margin: 0;
       }
     }
@@ -222,8 +225,6 @@
           margin-right: 2.9rem;
 
           p {
-            font-family: $font1;
-            margin: 0;
             font-size: 2.2rem;
             line-height: 2.8rem;
           }

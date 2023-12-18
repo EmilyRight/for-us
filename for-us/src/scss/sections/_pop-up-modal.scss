@@ -51,6 +51,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 1.2rem;
+    p {
+      font-family: $font1;
+    }
     &__list {
       padding-left: 1rem;
       font-family: $font1;

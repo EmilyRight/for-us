@@ -315,7 +315,11 @@
               Вознаграждения суммируются и&nbsp;выплачиваются один раз
               в&nbsp;квартал после проверки на&nbsp;качество.
             </p>
-            <p class="popup__link link js-gtm-event" data-event="quality-info">
+            <p
+              class="popup__link link js-gtm-event"
+              data-event="quality-info"
+              id="quality-info-modal"
+            >
               Что такое качественное подключение?
             </p>
           </div>
@@ -339,15 +343,41 @@
                   data-event="text-link_mo"
                   target="_blank"
                   >&laquo;Мой&nbsp;онлайн&raquo;</a
-                >
-                или
+                >,
                 <a
                   class="js-gtm-event link"
                   href="https://tele2.ru/tariff/my-online-plus"
                   data-event="text-link_mo-plus"
                   target="_blank"
                   >&laquo;Мой&nbsp;онлайн+&raquo;</a
-                >.
+                >
+                или
+                <a
+                  class="js-gtm-event link"
+                  href="https://tele2.ru/tariff/everywhere-online"
+                  data-event="text-link_vo"
+                  target="_blank"
+                >
+                  &laquo;Везде онлайн&raquo;</a
+                >
+
+                (<span class="link popup__link" id="regions-modal"
+                  >в&nbsp; регионах присутствия тарифа</span
+                >).
+              </p>
+              <p>
+                При подключении абоненту будет предоставляться в&nbsp;подарок
+                подписка
+                <a
+                  class="js-gtm-event link"
+                  href="https://tele2.ru/option/mixx-s"
+                  data-event="text-link_mixx"
+                  target="_blank"
+                  >MiXX&nbsp;S</a
+                >
+                с&nbsp;автоматическим отключением через 30&nbsp;дней.
+                По&nbsp;желанию абонент сможет продолжить использование подписки
+                на&nbsp;платной основе.
               </p>
             </div>
             <div
@@ -573,12 +603,24 @@
                   <p class="small-text">
                     Да. Скидка&nbsp;30% на&nbsp;абонентскую плату
                     предоставляется только с&nbsp;тарифами &laquo;Мой
-                    онлайн&raquo; или &laquo; Мой&nbsp;онлайн+&raquo;.
+                    онлайн&raquo;, &quot; Мой онлайн+&quot; и&nbsp;&laquo;Везде
+                    онлайн&raquo; (<span
+                      class="link popup__link"
+                      id="regions-modal"
+                      >в&nbsp; регионах присутствия тарифа</span
+                    >).
                   </p>
                   <p class="small-text">
                     Она также распространяется и&nbsp;на&nbsp;супер версии этих
                     тарифов&nbsp;&mdash; &laquo;Супер онлайн&raquo;
                     и&nbsp;&laquo;Супер онлайн+&raquo;.
+                  </p>
+                  <p>
+                    Также при подключении абоненту будет предоставляться
+                    в&nbsp;подарок подписка MiXX&nbsp;S с&nbsp;автоматическим
+                    отключением через 30&nbsp;дней. По&nbsp;желанию абонент
+                    сможет продолжить использование подписки на&nbsp;платной
+                    основе.
                   </p>
                 </div>
               </div>
@@ -886,7 +928,7 @@
         </div>
       </section>
       <div class="popup-modal popup-modal-hidden">
-        <div class="modal-box" id="popup-modal-box">
+        <div class="modal-box" data-modal="quality-info-modal">
           <div class="modal-box__header">
             <h4>Качественные подключения</h4>
             <div class="close">
@@ -915,6 +957,25 @@
             <div>
               <span class="btn close">Понятно</span>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-modal popup-modal-hidden">
+        <div class="modal-box" data-modal="regions-modal">
+          <div class="modal-box__header">
+            <h4>Регионы присутствия тарифа</h4>
+            <div class="close">
+              <svg viewBox="0 0 24 24" width="100%">
+                <use xlink:href="#close"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-box__body">
+            <p>
+              Иркутск, Омск, Курск, Тюмень, Смоленск, Волгоград, Вологда,
+              Екатеринбург, Кострома, Салехард, Самара, Саратов, Оренбург,
+              Ярославль, Казань, Санкт-Петербург
+            </p>
           </div>
         </div>
       </div>

@@ -56,8 +56,11 @@ function scrollToElement(el) {
 }
 
 function openPopup() {
-  const popupLink = document.querySelector('.popup__link');
-  popupLink.addEventListener('click', () => openModal('#popup-modal-box'));
+  const popupLinksList = document.querySelectorAll('.popup__link');
+  popupLinksList.forEach((popupLink) => {
+    const { id } = popupLink;
+    popupLink.addEventListener('click', () => openModal(id));
+  });
 }
 
 function setActive(arr) {
