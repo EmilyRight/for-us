@@ -4,7 +4,10 @@ html {
   font-size: 10px;
   background: #1f2229;
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -41,9 +44,15 @@ body {
   }
 }
 
-.page {background: #fff;transition: 0.2s;}
-.wow {opacity: 0;
-  &.animated {opacity: 1;}
+.page {
+  background: #fff;
+  transition: 0.2s;
+}
+.wow {
+  opacity: 0;
+  &.animated {
+    opacity: 1;
+  }
   //@media all and(max-width:600px){opacity: 1}
 }
 .svgs {
