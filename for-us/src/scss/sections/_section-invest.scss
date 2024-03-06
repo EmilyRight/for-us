@@ -1,74 +1,26 @@
-.section-invest {
-  position: relative;
-  padding-top: 3.6rem;
-  .section-layer {
-    padding: 2.4rem;
-    box-shadow: 0px 0.4rem 2rem 0px rgba(0, 0, 0, 0.08);
-    border-radius: 1.6rem;
-    max-width: 90%;
+.invest{
+  &.promoblock {
+    padding-top: 3.6rem;
   }
-  .invest {
-
-    &__title {
-      padding-bottom: 1.2rem;
-    }
-
-    &__text {
-      @include text-normal;
-    }
-
-    &__buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.8%;
-      align-items: center;
-    }
-
-    .btn {
-      font-size: 5vw;
-    }
-
-
-  }
-  .invest-pic-layer {
+  .promoblock-pic-layer {
     display: none;
   }
 
   @media (min-width: $tablet) {
     padding-top: 8rem;
-    .section-layer {
-      max-width: 78%;
-      padding: 5.3rem 9.9rem;
-      overflow: hidden;
-    }
-    .invest {
-      &__content {
-        max-width: 60%;
-      }
 
-      &__title {
-        font-size: 5.2rem;
-        line-height: 5.4rem;
-        margin-bottom: 1.8rem;
+    .promoblock-pic-layer {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      img {
+        display: block;
+        width: 100%;
+        float: right;
       }
-
-      &__text {
-        p {
-          margin-bottom: 1.8rem;
-        }
-      }
-
-      &__buttons {
-        display: flex;
-        justify-content: flex-start;
-        gap: 3.2rem;
-      }
-
-    }
-    .invest-pic-layer{display: block;
-      position: absolute;z-index: -1;
-      right: 0;bottom: 0;width: 60%;
-      img {display: block;width: 100%;float:right;}
     }
   }
 }

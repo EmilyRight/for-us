@@ -1,0 +1,94 @@
+.tournament {
+  &.promoblock {
+    padding-top: 0;
+    padding-bottom: 4.8rem;
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      order: 2;
+    }
+
+    &__text {
+      order: 3;
+      
+    }
+
+    &__buttons {
+      order: 4;
+    }
+
+    &__button {
+    }
+
+    .section-layer {
+      justify-content: flex-end;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 35rem;
+        height: 35rem;
+        background-color: rgba(215, 255, 56, 0.641);
+        top: -5rem;
+        right: -5rem;
+        z-index: -1;
+        border-radius: 50%;
+        will-change: filter;
+        filter: blur(80px);
+      }
+    }
+  }
+  .promoblock-pic-layer {
+    max-width: 45rem;
+    display: flex;
+    justify-content: center;
+    order: 1;
+    right: auto;
+    left: 0;
+    bottom: auto;
+    top: 0;
+    display: block;
+    img {
+      max-width: 100%;
+    }
+  }
+  .btn {
+  }
+  .btn-primary {
+  }
+  .js-gtm-event {
+  }
+  .js-go-next {
+  }
+  @media (min-width: 600px) {
+    padding-top: 0rem;
+    padding-bottom: 4.8rem;
+    .section-layer {
+      justify-content: flex-end;
+      display: flex;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 35rem;
+        height: 35rem;
+        background-color: rgba(215, 255, 56, 0.641);
+        left: -5rem;
+        bottom: 10rem;
+        z-index: -1;
+        border-radius: 50%;
+        will-change: filter;
+        filter: blur(80px);
+      }
+    }
+    .promoblock-pic-layer {
+      position: absolute;
+      max-width: 40%;
+    }
+    .promoblock__content {
+      max-width: 60%;
+    }
+  }
+}

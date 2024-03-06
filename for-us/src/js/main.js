@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   openPopup();
   faqOpener();
   setAnimation();
-
+  setCurrentYear();
   const screenWidth = document.documentElement.clientWidth;
   const items = document.querySelectorAll('.tariffs-list__item');
   const lastItem = Array.from(items).pop();
@@ -99,5 +99,12 @@ function setAnimation() {
     if (screenWidth < 600) {
       it.classList.add('fadeInUp');
     }
+  });
+}
+
+function setCurrentYear() {
+  const yearSpan = document.querySelectorAll('.current-year');
+  yearSpan.forEach((span) => {
+    span.innerHTML = new Date().getFullYear().toString();
   });
 }

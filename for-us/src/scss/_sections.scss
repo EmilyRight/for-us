@@ -94,13 +94,14 @@
     }
   }
 }
-
+@import "sections/section-promoblock";
 @import "sections/header";
 @import "sections/teaser";
+@import "sections/_banner";
 @import "sections/section-invest";
 @import "sections/section-tariffs";
 @import "sections/section-actions";
 @import "sections/section-faq";
 @import "sections/_pop-up-modal";
-//@import "sections/page-menu";
+@import "sections/tournament";
 @import "sections/footer";
