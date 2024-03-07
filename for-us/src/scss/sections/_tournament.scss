@@ -13,7 +13,6 @@
 
     &__text {
       order: 3;
-      
     }
 
     &__buttons {
@@ -89,6 +88,10 @@
     }
     .promoblock__content {
       max-width: 60%;
+    }
+
+    .promoblock__text {
+     font-size: 1.6rem;
     }
   }
 }
