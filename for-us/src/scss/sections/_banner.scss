@@ -12,7 +12,9 @@
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 0;
-    font-size: 2.7rem
+    font-size: 2.7rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.2rem
   }
 
   &__text {
@@ -96,6 +98,15 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .4s;
+    &:hover {
+      opacity: .8;
+    }
     .icon-field-opener {
       display: block;
       margin: 0;
@@ -104,6 +115,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    span {
+      display: none;
     }
     &__icon {
       transform: rotate(-90deg);
@@ -115,7 +129,7 @@
   }
 
   @media (min-width: 600px) {
-    margin-top: 5rem;
+    margin-top: 0;
     .section-layer {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
@@ -126,18 +140,31 @@
 
     .banner {
       &__content {
-        width: 35%;
+        width: 60%;
+        max-width: 40rem;
+      }
+      &__picture-block {
+        width: 30%;
+      }
+      &__title {
+        font-size: 3.2rem;
+        line-height: 2.8rem;
+        font-weight: 400;
       }
       &__text {
         margin-bottom: 0;
         max-width: 80%;
-        font-size: 1.6rem;
+        font-size: 2.2rem;
       }
       &__link {
+        position: static;
+        transform: none;
         justify-self: end;
         align-self: flex-end;
         margin-left: auto;
-        font-size: 1.4rem;
+        span {
+          display: block;
+        }
       }
     }
 
